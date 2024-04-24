@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="status-bar">
+            <div class="icons">
+                <img src="ios_cellular_status.png" height="13">
+                <img src="ios_wifi_status.png" height="13">
+                <img src="ios_charge_status.png" height="13">
+            </div>
+        </div>
+        <div class="calculator">
+            <form id="calc-form">
+                <div class="display">
+                    <input type="text" name="display" id="display" disabled>
+                </div>
+            <div class="numpad">
+                <div>
+                    <input type="button" value="AC" onclick="clearDisplay()" style="color: black; font-size: 190%;">
+                    <input type="button" value="±" onclick="toggleSign()" style="color: black; font-size: 190%;">
+                    <input type="button" value="%" onclick="calculatePercentage()" style="color: black; font-size: 190%;">
+                    <input type="button" value="÷" onclick="addSymbol('÷')">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="addSymbol('7')">
+                    <input type="button" value="8" onclick="addSymbol('8')">
+                    <input type="button" value="9" onclick="addSymbol('9')">
+                    <input type="button" value="×" onclick="addSymbol('×')">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="addSymbol('4')">
+                    <input type="button" value="5" onclick="addSymbol('5')">
+                    <input type="button" value="6" onclick="addSymbol('6')">
+                    <input type="button" value="-" onclick="addSymbol('-')">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="addSymbol('1')">
+                    <input type="button" value="2" onclick="addSymbol('2')">
+                    <input type="button" value="3" onclick="addSymbol('3')">
+                    <input type="button" value="+" onclick="addSymbol('+')">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="addSymbol('0')">
+                    <input type="button" value="." onclick="addSymbol('.')">
+                    <input type="button" value="=" onclick="calculateResult()">
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="chin"></div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+
+</html>
